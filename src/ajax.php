@@ -37,7 +37,25 @@ if (isset($_GET['detalle'])) {
     }
     echo $msg;
     die();
-} else if (isset($_GET['procesarPedido'])) {
+} else if (isset($_GET['editarSala'])) {
+    $id = $_GET['id'];
+    $sql = mysqli_query($conexion, "SELECT * FROM salas WHERE id = $id");
+    $data = mysqli_fetch_array($sql);
+    echo json_encode($data);
+    exit;
+    
+}
+else if (isset($_GET['editarUsuario'])) {
+    $id = $_GET['id'];
+    $sql = mysqli_query($conexion, "SELECT * FROM usuarios WHERE id = $id");
+    $data = mysqli_fetch_array($sql);
+    echo json_encode($data);
+    exit;
+    
+}
+
+ 
+else if (isset($_GET['procesarPedido'])) {
     $id_sala = $_GET['id_sala'];
     $id_user = $_SESSION['idUser'];
     $mesa = $_GET['mesa'];

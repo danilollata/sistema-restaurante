@@ -321,7 +321,28 @@ function editarUsuario(id) {
         }
     });
 }
-
+function editarSala(id) {
+    const action = "editarSala";
+    $.ajax({
+        url: 'ajax.php',
+        type: 'GET',
+        async: true,
+        data: {
+            editarSala: action,
+            id: id
+        },
+        success: function (response) {
+            const datos = JSON.parse(response);
+            $('#nombre').val(datos.nombre);
+            $('#mesas').val(datos.mesas);
+            $('#id').val(datos.id);
+            $('#btnAccion').val('Modificar');
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
 
 
 function editarPlato(id) {
