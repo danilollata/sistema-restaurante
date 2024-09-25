@@ -47,24 +47,65 @@ if (!empty($_SESSION['active'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
 
-  <!-- Google Font: Source Sans Pro -->
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
+
   <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
+
   <link rel="stylesheet" href="assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
+
   <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Sistemas</b>FREE</a>
+    <a href="#"><b>Rest</b>Bar</a>
   </div>
-  <!-- /.login-logo -->
+  <style>
+  body {
+    background-image: url('assets/img/fondo login.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0); /* Transparente */
+    border: 2px solid black; /* Borde negro */
+  }
+
+  .login-card-body {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparente */
+  }
+
+  .form-control {
+    border: 2px solid black; /* Borde negro para los campos de entrada */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo ligeramente transparente */
+  }
+
+  .input-group-text {
+    border: 2px solid black; /* Borde negro para el ícono */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo ligeramente transparente */
+  }
+
+  /* Estilo para cambiar el color, tamaño y negrita de "RestBar" */
+  .login-logo a {
+    color: black !important; /* Cambia "RestBar" a negro */
+    font-size: 2.5rem; /* Incrementa el tamaño del texto */
+    font-weight: bold; /* Aplica negrita */
+  }
+
+  .login-box-msg {
+    color: black; /* Cambia "Inicio de sesión" a negro */
+  }
+</style>
+
+
+
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">Inicio de sesión</p>
 
       <form action="" method="post" autocomplete="off">
       <?php echo (isset($alert)) ? $alert : '' ; ?>  
@@ -85,24 +126,24 @@ if (!empty($_SESSION['active'])) {
           </div>
         </div>
         <div class="row">
-          <!-- /.col -->
+
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
-          <!-- /.col -->
+
         </div>
       </form>
     </div>
-    <!-- /.login-card-body -->
+
   </div>
 </div>
 <!-- /.login-box -->
 
 <!-- jQuery -->
 <script src="assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
+
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
+
 <script src="assets/dist/js/adminlte.min.js"></script>
 </body>
 </html>

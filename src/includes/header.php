@@ -125,6 +125,14 @@ if (empty($_SESSION['active'])) {
                                 </a>
                             </li>
                             <li class="nav-item">
+                            <a href="MenuList.php" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Lista de menus
+                                </p>
+                            </a>
+                             </li>
+                            <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fas fa-user-cog"></i>
                                     <p>
@@ -148,9 +156,7 @@ if (empty($_SESSION['active'])) {
                                 </ul>
                             </li>';
                         } ?>
-
-
-
+                        
                         <li class="nav-item">
                             <a href="salir.php" class="nav-link">
                                 <i class="nav-icon fas fa-power-off"></i>
@@ -159,6 +165,7 @@ if (empty($_SESSION['active'])) {
                                 </p>
                             </a>
                         </li>
+                        
 
                     </ul>
                 </nav>
